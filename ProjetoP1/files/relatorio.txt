@@ -1,0 +1,5 @@
+Relatório de orçamentos analisados
+
+Identificador => Valor
+teste => 26,33
+Casa => 107,57

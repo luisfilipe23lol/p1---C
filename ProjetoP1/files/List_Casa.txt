@@ -1,0 +1,11 @@
+2
+
+bloco
+bloco de pedra
+87,34
+2021
+
+martelo
+material
+20,23
+2021

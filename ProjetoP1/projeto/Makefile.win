@@ -1,0 +1,40 @@
+# Project: Projeto1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o ../livraria/inputValues.o ../livraria/DoublyLinkedList.o ../livraria/linkedQueue_TIPO.o ../livraria/singlyLinkedList_TIPO.o
+LINKOBJ  = main.o ../livraria/inputValues.o ../livraria/DoublyLinkedList.o ../livraria/linkedQueue_TIPO.o ../livraria/singlyLinkedList_TIPO.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Projeto1.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+../livraria/inputValues.o: ../livraria/inputValues.c
+	$(CC) -c ../livraria/inputValues.c -o ../livraria/inputValues.o $(CFLAGS)
+
+../livraria/DoublyLinkedList.o: ../livraria/DoublyLinkedList.c
+	$(CC) -c ../livraria/DoublyLinkedList.c -o ../livraria/DoublyLinkedList.o $(CFLAGS)
+
+../livraria/linkedQueue_TIPO.o: ../livraria/linkedQueue_TIPO.c
+	$(CC) -c ../livraria/linkedQueue_TIPO.c -o ../livraria/linkedQueue_TIPO.o $(CFLAGS)
+
+../livraria/singlyLinkedList_TIPO.o: ../livraria/singlyLinkedList_TIPO.c
+	$(CC) -c ../livraria/singlyLinkedList_TIPO.c -o ../livraria/singlyLinkedList_TIPO.o $(CFLAGS)

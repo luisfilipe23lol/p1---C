@@ -1,0 +1,11 @@
+2
+
+bloco
+bloco de pedra
+14,21
+2021
+
+martelo
+ferramenta
+12,12
+2021
